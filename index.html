@@ -16,29 +16,56 @@
     }
 
     body{
-      min-height:100vh;
-      overflow-x:hidden;
-      color:#fff;
-      background:
-        radial-gradient(circle at top, rgba(255,77,109,0.25), transparent 40%),
-        radial-gradient(circle at bottom, rgba(255,0,122,0.25), transparent 45%),
-        linear-gradient(135deg, #0b0014, #140018, #000000);
-      position:relative;
-    }
+  min-height:100vh;
+  overflow-x:hidden;
+  color:#fff;
+  position:relative;
+  background:
+    linear-gradient(135deg,#f5e6ff,#e8d4ff,#dcbfff);
+}
 
-    body::before{
-      content:"";
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1400&q=80');
-      background-size:cover;
-      background-position:center;
-      opacity:0.12;
-      z-index:0;
-    }
+/* Cute Background Decorations */
+body::before{
+  content:"🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘 🎂 🐘";
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  font-size:34px;
+  opacity:0.12;
+  line-height:140px;
+  word-spacing:60px;
+  z-index:0;
+  pointer-events:none;
+
+  animation:bgMove 30s linear infinite;
+}
+
+/* Soft overlay */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(2px);
+  z-index:0;
+}
+
+@keyframes bgMove{
+
+  0%{
+    transform:translateY(0px) translateX(0px);
+  }
+
+  50%{
+    transform:translateY(-40px) translateX(-20px);
+  }
+
+  100%{
+    transform:translateY(-80px) translateX(20px);
+  }
+
+}
 
     .screen{
       position:fixed;
@@ -66,9 +93,9 @@
     .card{
       width:100%;
       max-width:820px;
-      background:rgba(20,0,30,0.55);
+      background:rgba(255,255,255,0.22);
+      border:1px solid rgba(255,255,255,0.35);
       backdrop-filter: blur(22px);
-      border:1px solid rgba(255,77,109,0.25);
       border-radius:24px;
       padding:38px;
       text-align:center;
@@ -119,17 +146,18 @@
   50%{transform:translateX(10px);}
 }
     h1,h2,h3{
-      color:#ffb3c7;
+      color:#8e44ff;
       margin-bottom:15px;
       font-weight:600;
     }
 
     p{
-      font-size:1.05rem;
-      line-height:1.8;
-      color:#f5f5f5;
-      opacity:0.95;
-    }
+  font-size:1.05rem;
+  line-height:1.8;
+  color:#3d2352;
+  font-weight:500;
+  opacity:1;
+}
 
     button{
       margin-top:25px;
@@ -243,13 +271,9 @@
 
 /* BACK STYLE */
 .back{
-  background:rgba(255,255,255,0.08);
-  color:#fff;
+  background:rgba(255,255,255,0.18);
+  color:#2d1242;
   transform:rotateY(180deg);
-  text-align:center;
-  font-size:0.95rem;
-  line-height:1.5;
-  backdrop-filter: blur(10px);
 }
 .img-box{
   flex:0 0 auto;
@@ -284,7 +308,8 @@
   margin-bottom:12px;
   line-height:1.7;
   font-size:1.05rem;
-  color:#f5f5f5;
+  color:#43235f;
+  font-weight:500;
 }
 .heart-bg{
   width:100%;
@@ -394,9 +419,9 @@
     <p>
       12 July 2025 → 20 May 2026<br>
       <strong style="font-size:1.6rem; color:#ff7aa2;">
-        <span id="daysCounter">0</span>Days Together 
+        <span id="daysCounter">0</span> Days Together 
       </strong><br><br>
-      "10 months, 8 days down, a many more to go—I hope our friendship become more and more stronger"
+      "9 months, 8 days down, a many more to go—I hope our friendship become more and more stronger"
     </p>
     <button onclick="go(4)">Next Memory</button>
   </div>
@@ -416,93 +441,75 @@
     <div class="slideshow">
 
       <div class="img-box">
-        <img src="images/photo1.jpg.jpeg">
-        
+        <img src="images/photo1.jpg.jpeg">        
       </div>
 
       <div class="img-box">
-        <img src="images/photo2.jpg.jpeg">
-        
+        <img src="images/photo2.jpg.jpeg">       
       </div>
 
       <div class="img-box">
         <img src="images/photo3.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo4.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo5.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo6.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo7.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo8.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo9.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo10.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo11.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo12.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo13.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo14.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo15.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo16.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo17.jpg.jpeg">
-        
       </div>
 
       <div class="img-box">
         <img src="images/photo18.jpg.jpeg">
-        
       </div>
 
     </div>
@@ -597,9 +604,6 @@
       <li>Tension na lo koi dhond b dain gy</li>
       <li>Assignment bana dain gy janab ko</li>
       <li>Janab kay account par achi aar ha hehe</li>
-      
-      
-      
     </ol>
 
     <button onclick="go(7)">Final</button>
@@ -626,28 +630,46 @@
 </div>
 
 <script>
+  let counterStarted = false;
 function go(n){
+
   for(let i=1;i<=7;i++){
-    const el=document.getElementById('s'+i);
-    if(el) el.classList.remove('active');
+
+    const el = document.getElementById('s'+i);
+
+    if(el){
+      el.classList.remove('active');
+    }
+
   }
 
-  const target=document.getElementById('s'+n);
-  if(target) target.classList.add('active');
+  const target = document.getElementById('s'+n);
 
-  if(n===3){
+  if(target){
+    target.classList.add('active');
+  }
+
+  // COUNTER START
+  if(n === 3){
     animateCounter();
   }
 
-  // 👉 HERE IS THE FIX (STEP 7 trigger)
+  // HEARTS START
   if(n === 7){
-    createHearts();
+
+    const container = document.getElementById("heartContainer");
+
+    if(container.innerHTML === ""){
+      createHearts();
+    }
+
   }
+
 }
 function createHearts(){
   const container = document.getElementById("heartContainer");
 
-  const images = [
+ const images = [
     "images/photo1.jpg.jpeg","images/photo2.jpg.jpeg","images/photo3.jpg.jpeg",
     "images/photo4.jpg.jpeg","images/photo5.jpg.jpeg","images/photo6.jpg.jpeg",
     "images/photo7.jpg.jpeg","images/photo8.jpg.jpeg","images/photo9.jpg.jpeg",
@@ -655,6 +677,7 @@ function createHearts(){
     "images/photo13.jpg.jpeg","images/photo14.jpg.jpeg","images/photo15.jpg.jpeg",
     "images/photo16.jpg.jpeg","images/photo17.jpg.jpeg","images/photo18.jpg.jpeg"
   ];
+
 
   for(let i=0;i<60;i++){
     let heart = document.createElement("div");
@@ -677,23 +700,33 @@ function createHearts(){
 }
 
 function animateCounter(){
-  const el=document.getElementById('daysCounter');
-  if(!el) return;
 
-  let start=0;
-  const end=312;
-  const duration=2000;
-  const stepTime=20;
-  const increment=end/(duration/stepTime);
+  if(counterStarted) return;
 
-  const timer=setInterval(()=>{
-    start+=increment;
-    if(start>=end){
-      start=end;
+  counterStarted = true;
+
+  const el = document.getElementById('daysCounter');
+
+  let current = 0;
+
+  const target = 312;
+
+  const timer = setInterval(()=>{
+
+    current += 5;
+
+    if(current >= target){
+
+      current = target;
+
       clearInterval(timer);
+
     }
-    el.innerText=Math.floor(start);
-  },stepTime);
+
+    el.innerText = current;
+
+  },8);
+
 }
 function flip(card){
   card.classList.toggle("flipped");
